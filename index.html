@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>لعبة XO</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+      
+    <div class="app">
+               
+      <div class="panel">
+              
+        <div class="header">
+                  
+          <div>
+                      
+            <div class="title">لعبة XO</div>
+                      
+            <div class="subtitle">جولة قصيرة، تأثيرات ناعمة، وسجل نقاط.</div>
+                    
+          </div>
+                  
+          <div class="turn">
+                      <span class="dot" id="dot"></span>           <span
+              id="turnText"
+              >دور: X</span
+            >
+                    
+          </div>
+                
+        </div>
+
+              
+        <div class="controls">
+                  
+          <div class="toggle" id="starterToggle" aria-label="من يبدأ؟">
+                      <button data-start="X" class="active">X يبدأ</button>
+                      <button data-start="O">O يبدأ</button>         
+          </div>
+                  <button class="btn" id="reset">إعادة الجولة</button>
+                  <button class="btn secondary" id="clearScore">
+            تصفير النقاط
+          </button>
+                
+        </div>
+
+              
+        <div class="score">
+                  
+          <div class="card">
+                      
+            <div class="label">نقاط X</div>
+                      
+            <div class="value" id="scoreX">0</div>
+                    
+          </div>
+                  
+          <div class="card">
+                      
+            <div class="label">تعادل</div>
+                      
+            <div class="value" id="scoreD">0</div>
+                    
+          </div>
+                  
+          <div class="card">
+                      
+            <div class="label">نقاط O</div>
+                      
+            <div class="value" id="scoreO">0</div>
+                    
+          </div>
+                
+        </div>
+            
+      </div>
+
+               
+      <div class="panel" style="position: relative">
+              
+        <div class="board" id="board" role="grid" aria-label="لوح لعبة XO">
+                           
+          <div class="cell" role="gridcell" data-idx="0"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="1"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="2"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="3"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="4"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="5"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="6"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="7"></div>
+                  
+          <div class="cell" role="gridcell" data-idx="8"></div>
+                
+        </div>
+                   
+        <div class="win-line" id="winLine">
+                  
+          <div class="line" id="line"></div>
+                
+        </div>
+            
+      </div>
+        
+    </div>
+
+      
+    <div class="toast" id="toast" aria-live="polite"></div>
+      
+    <script src="main.js"></script>
+  </body>
+</html>
